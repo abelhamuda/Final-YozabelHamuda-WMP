@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="etLoginEmail" type="id" />
+    <item name="etLoginPassword" type="id" />
+    <item name="btnLogin" type="id" />
+    <item name="spSubjects" type="id" />
+    <item name="btnAddSubject" type="id" />
+</resources>
