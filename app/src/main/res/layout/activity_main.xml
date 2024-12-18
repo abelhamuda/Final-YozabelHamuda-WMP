@@ -11,26 +11,24 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/your_image"
+        android:src="@drawable/logo"
         android:contentDescription="Image Description"
         android:layout_marginBottom="20dp"/>
 
     <!-- Login Button -->
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
+        style="@style/CustomButtonStyle"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:background="#41444B"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:text="Login" />
 
     <!-- Register Button -->
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="match_parent"
+        style="@style/CustomButtonStyle"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:background="#41444B"
-        android:textColor="#FFFFFF" />
+        android:text="Register" />
 </LinearLayout>

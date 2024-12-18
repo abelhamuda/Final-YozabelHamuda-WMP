@@ -3,25 +3,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="32dp"
+    android:gravity="center">
+
+    <!-- Email EditText -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/logo" />
 
     <EditText
         android:id="@+id/etLoginEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background" />
 
+    <!-- Password EditText -->
     <EditText
         android:id="@+id/etLoginPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/edit_text_background" />
 
+    <!-- Login Button -->
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#41444B"
+        android:layout_marginTop="5dp"
+        android:padding="14dp" />
 </LinearLayout>

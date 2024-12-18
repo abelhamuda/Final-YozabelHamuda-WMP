@@ -17,16 +17,12 @@ public class SummaryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
 
-        // Initialize UI elements
         tvSummary = findViewById(R.id.tvSummary);
 
-        // Initialize DatabaseHelper
         dbHelper = new DatabaseHelper(this);
 
-        // Get the logged-in student ID
         studentId = getIntent().getIntExtra("student_id", -1);
 
-        // Display the enrollment summary
         displayEnrollmentSummary();
     }
 

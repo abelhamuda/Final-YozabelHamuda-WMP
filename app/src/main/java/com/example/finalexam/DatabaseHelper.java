@@ -22,7 +22,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "password TEXT NOT NULL" +
                 ")");
 
-        // Create Enrollments table
         db.execSQL("CREATE TABLE Enrollments (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "student_id INTEGER NOT NULL, " +

@@ -26,24 +26,19 @@ public class EnrollmentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enrollment);
 
-        // Get the logged-in student ID
         studentId = getIntent().getIntExtra("student_id", -1);
 
-        // Initialize UI elements
         spSubjects = findViewById(R.id.spSubjects);
         btnAddSubject = findViewById(R.id.btnAddSubject);
         btnViewSummary = findViewById(R.id.btnFinish);
 
-        // Initialize DatabaseHelper and SQLiteDatabase
         dbHelper = new DatabaseHelper(this);
         db = dbHelper.getWritableDatabase();
 
-        // Populate Spinner with subjects
-        String[] subjects = {"Math (3 credits)", "English (2 credits)", "Science (4 credits)", "History (3 credits)"};
+        String[] subjects = {"Introduction to Programming (3 credits)", "Data Structures and Algorithms (3 credits)", "Database Systems (3 credits)", "Computer Networks (3 credits)", "Operating Systems (3 credits)", "Software Engineering (3 credits)", "Artificial Intelligence (3 credits)", "Web Development (3 credits)", "Cybersecurity Fundamentals (3 credits)", "Mobile Application Development (3 credits)"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, subjects);
         spSubjects.setAdapter(adapter);
 
-        // Add Subject Button click listener
         btnAddSubject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +49,6 @@ public class EnrollmentActivity extends AppCompatActivity {
             }
         });
 
-        // View Summary Button click listener
         btnViewSummary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

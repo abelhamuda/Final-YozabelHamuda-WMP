@@ -3,22 +3,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="32dp"
+    android:gravity="center">
 
+    <!-- Spinner for Subjects -->
     <Spinner
         android:id="@+id/spSubjects"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_background"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp" />
 
+    <!-- Add Subject Button -->
     <Button
         android:id="@+id/btnAddSubject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add Subject" />
+        android:text="Add Subject"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#41444B"
+        android:layout_marginBottom="16dp"
+        android:padding="14dp" />
 
+    <!-- View Summary Button -->
     <Button
         android:id="@+id/btnFinish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Summary" />
+        android:text="View Summary"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#41444B"
+        android:padding="14dp" />
+
 </LinearLayout>

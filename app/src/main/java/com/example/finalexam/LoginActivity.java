@@ -22,15 +22,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Initialize UI elements
         etLoginEmail = findViewById(R.id.etLoginEmail);
         etLoginPassword = findViewById(R.id.etLoginPassword);
         btnLogin = findViewById(R.id.btnLogin);
 
-        // Initialize DatabaseHelper
         dbHelper = new DatabaseHelper(this);
 
-        // Login Button click listener
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,9 +43,6 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    /**
-     * Validates the input for email and password.
-     */
     private boolean validateInput(String email, String password) {
         if (email.isEmpty() || password.isEmpty()) {
             return false;
@@ -59,9 +53,6 @@ public class LoginActivity extends AppCompatActivity {
         return true;
     }
 
-    /**
-     * Handles the student login logic.
-     */
     private void loginStudent(String email, String password) {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM Students WHERE email = ? AND password = ?", new String[]{email, password});
@@ -86,9 +77,6 @@ public class LoginActivity extends AppCompatActivity {
         db.close();
     }
 
-    /**
-     * Saves the logged-in student's session using SharedPreferences.
-     */
     private void saveSession(int studentId) {
         SharedPreferences sharedPreferences = getSharedPreferences("FinalExamApp", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
